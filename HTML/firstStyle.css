@@ -2,13 +2,14 @@
 h1
 {
 	text-align: center;
-	color:white;
+	color:black;
 	font-size: 5em;
+	font-style: italic;
 }
 
 body
 {
-	background-color: rgba(3, 207, 37, 0.664);
+	background-color: rgba(222, 235, 224, 0.664);
 	text-align: center;
 }
 
