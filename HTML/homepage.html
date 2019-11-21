@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html lang = "en">
+
+<html>
+
+	<!-- Refrence to stlye sheer-->
+	<head >
+			<link rel="stylesheet" href="firstStyle.css">
+	</head>
+
+	<!-- Title being shown on web page-->
+	<h1>
+			Website Name
+	</h1>
+
+	<body>
+
+		
+		
+		<div>
+			<!-- Ingrdients button-->
+			<button id="ingredients" class="button">
+				Search By Ingredients
+			</button>
+
+			<!-- Receipe button-->
+			<button id = "Receipe" class="button">
+				Search By Receipe Name
+			</button>
+
+		</div>
+
+
+		<!-- Generic Photo
+			Hover over a button will change picture
+			Un hover will go back to orginal picture-->
+		<div>
+			<img id = "generic" src="genericPhoto.jpg" style="width:450px;height:300px;">
+
+			
+			
+			
+			<script>
+
+				document.querySelector('#ingredients').onmouseover = function(){
+
+					
+					document.getElementById("generic").src = "ingredientsButton.jpg";
+
+				}
+
+				document.querySelector('#ingredients').onmouseout = function(){
+
+					
+					document.getElementById("generic").src = "genericPhoto.jpg";
+
+				}
+
+
+				document.querySelector('#Receipe').onmouseout = function(){
+
+					
+					document.getElementById("generic").src = "genericPhoto.jpg";
+
+				}
+
+				document.querySelector('#Receipe').onmouseover = function(){
+
+					
+					document.getElementById("generic").src = "recipeButton.jpg";
+
+				}
+			</script>
+
+		</div>
+
+	</body>
+
+	<footer>
+		Richard B. Arthur L. Kamal C. Kat C. Alina Z
+	</footer>
+
+
+
+</html>
