@@ -6,7 +6,15 @@ verify_ssl = true
 [dev-packages]
 
 [packages]
-requests = "*"
+requests = "==2.22.0"
+certifi = "==2019.9.11"
+chardet = "==3.0.4"
+idna = "==2.8"
+mysqlclient = "==1.4.6"
+pytz = "==2019.3"
+sqlparse = "==0.3.0"
+urllib3 = "==1.25.7"
+Django = "==2.2.7"
 
 [requires]
 python_version = "3.7"
