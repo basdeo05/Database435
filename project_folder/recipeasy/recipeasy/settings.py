@@ -25,7 +25,7 @@ SECRET_KEY = 'jbt@tl6j=2fs9u51ql^ku=b37@@%b$dwz_dv9zl)qmb!y7#)u5'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['172.104.30.96']
 
 
 # Application definition
@@ -78,8 +78,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'recipeasy',
-        'USER': 'kchonka',
-        'PASSWORD': 'recipe',
+        'USER': 'access',
+        'PASSWORD': 'pass123',
         'HOST': 'localhost',
         'PORT': '',
     }
