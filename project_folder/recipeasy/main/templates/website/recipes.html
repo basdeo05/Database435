@@ -1,0 +1,17 @@
+{% extends 'website/layout.html' %} {% block content %}
+
+<p>
+    {% for i in recipes %}
+
+    <li>
+
+        <a href="{{i.recipe_name}}">{{ i.recipe_name }}</a>
+    </li>
+
+    {% endfor %}
+
+</p>
+
+
+
+{% endblock %}
