@@ -1,12 +1,11 @@
 {% extends 'website/layout.html' %} {% block content %}
 <main role="main" class="container">
     <div class="jumbotron">
-        <h2>Here's what we got for '{{query}}':</h2>
+        <h2>Here's our recipe categories!</h2>
         <p>
-            {% for i in recipes %}
-
+            {% for i in meals %}
             <li>
-                <a href="{{i.recipe_name}}">{{ i.recipe_name }}</a>
+                <a href="{{i.meal_name}}">{{i.meal_name}}</a>
             </li>
 
             {% endfor %}
@@ -14,8 +13,6 @@
         </p>
     </div>
 </main>
-
-
 
 
 {% endblock %}

@@ -1,7 +1,7 @@
 {% extends 'website/layout.html' %} {% block content %}
 <main role="main" class="container">
     <div class="jumbotron">
-        <h2>Here's what we got for '{{query}}':</h2>
+        <h1>Check out our super easy {{category}} recipes!</h1>
         <p>
             {% for i in recipes %}
 
@@ -10,12 +10,7 @@
             </li>
 
             {% endfor %}
-
         </p>
     </div>
 </main>
-
-
-
-
 {% endblock %}

@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'jbt@tl6j=2fs9u51ql^ku=b37@@%b$dwz_dv9zl)qmb!y7#)u5'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['172.104.30.96']
+ALLOWED_HOSTS = ['li1849-96.members.linode.com']
 
 
 # Application definition
@@ -80,7 +80,7 @@ DATABASES = {
         'NAME': 'recipeasy',
         'USER': 'access',
         'PASSWORD': 'pass123',
-        'HOST': 'localhost',
+        'HOST': '/var/run/mysqld/mysqld.sock',
         'PORT': '',
     }
 }

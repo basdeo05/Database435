@@ -5,6 +5,8 @@ app_name = 'main'
 
 urlpatterns = [
     path('', views.homepage, name='homepage'),
-    path('results/', views.categories, name='search'),
-    path('results/<meal_name>', views.recipes, name='meal_name'),
+    path('categories/', views.categories, name='search'),
+    path('search/', views.search, name='search'),
+    path('categories/<name>', views.recipes, name='meal_name'),
+    path('search/<name>', views.recipes, name='meal_name'),
 ]
