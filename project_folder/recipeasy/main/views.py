@@ -66,7 +66,8 @@ def search(request):
     
 def categories(request):
     # get all categories
-    meals = Meals.objects.all()  
+    meals = Meals.objects.all()
+
     # return meals to categories.html
     return render(
         request, 
@@ -100,3 +101,6 @@ def recipes(request, name):
 
     #if neither is true 
     return HttpResponse("There's no data that matches")
+
+def about_us(request):
+    return render(request,template_name='website/aboutus.html')

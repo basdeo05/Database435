@@ -1,19 +1,20 @@
 {% extends 'website/layout.html' %} {% block content %}{% load static %}
 <main role="main" class="container">
     <div class="jumbotron">
-        <img src="{% static 'images/recipe_images/{{i.recipe_name}}.jpg' %}" alt="">
         <p>
             {% for i in recipe %}
             <h1>{{i.recipe_name}}</h1>
+            <img src="{% static 'images/recipe_images/'|add:i.recipe_name|add:'.jpg' %}" alt="" height="300"
+                width="400">
             <p>
-                <h5>Ingredients:</h5>
+                <h3>Ingredients:</h3>
                 {%for x in i.ingredients%}
                 <li>{{x}}</li>
                 {% endfor %}
             </p>
             <p>
-                <h5>Directions:</h5>
-                <ol>
+                <h3>Directions:</h3>
+                <ol class="center">
                     {%for x in i.directions%}
                     <li>{{x}}</li>
                     {% endfor %}

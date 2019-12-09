@@ -11,6 +11,10 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 
 import os
+import json
+
+with open('/etc/config.json') as config_file:
+    config = json.load(config_file)
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -20,13 +24,14 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'jbt@tl6j=2fs9u51ql^ku=b37@@%b$dwz_dv9zl)qmb!y7#)u5'
+SECRET_KEY = config['SECRET_KEY']
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = False     # Change to this for apache server hosting
+#DEBUG = True        # Change to this for local hosting
 
-ALLOWED_HOSTS = ['li1849-96.members.linode.com']
-
+ALLOWED_HOSTS = ['li1849-96.members.linode.com']    # change to this to host on apache server
+#ALLOWED_HOSTS = ['172.104.30.96']                   # change to this for local hosting
 
 # Application definition
 
@@ -78,9 +83,10 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'recipeasy',
-        'USER': 'access',
-        'PASSWORD': 'pass123',
-        'HOST': '/var/run/mysqld/mysqld.sock',
+        'USER': config['USER'],
+        'PASSWORD': config['PASSWORD'],
+        'HOST': '/var/run/mysqld/mysqld.sock',    # change to this for apache server
+        # 'HOST': 'localhost',                        # change to this for local hosting
         'PORT': '',
     }
 }

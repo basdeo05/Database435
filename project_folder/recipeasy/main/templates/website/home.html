@@ -1,9 +1,22 @@
 {% extends 'website/layout.html' %} {% load static %}{% block content %}
 <main role="main" class="container">
     <div class="jumbotron">
-        <h1>Welcome to Quick and Easy Recipes</h1>
-        <p class="lead">We have a wide selection of simple 3 ingredient recipes. Checkout our popular recipes!
+        <h1 align="center">Welcome to the home of quick and easy recipes!</h1>
+        <p class="lead" align="center">We have a wide selection of simple 3 ingredient recipes. <br> Check them out!
         </p>
+
+        <!-- need to figure out how to center search bar -->
+        <!-- <br><br>
+
+        <div>
+            <form class="form-inline mt-2 mt-md-0" method="GET" action="/search/">
+                <input class="form-control mr-sm-2" name="q" value="{{request.GET.q}}" type="text"
+                    placeholder="Search recipes..." aria-label="Search">
+                <button class="btn btn-outline-light my-2 my-sm-0 bg-success" type="submit">Search</button>
+            </form>
+        </div>
+
+        <br><br><br> -->
 
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">

@@ -1,16 +1,25 @@
-{% extends 'website/layout.html' %} {% block content %}
+{% extends 'website/layout.html' %} {% block content %}{% load static %}
 <main role="main" class="container">
     <div class="jumbotron">
         <h2>Here's what we got for '{{query}}':</h2>
         <p>
-            {% for i in recipes %}
+            <div class="container">
+                <div class="row">
+                    {% for i in recipes %}
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card border-0">
+                            <a href="{{i.recipe_name}}" class="lightbox">
+                                <img class="card-img-top"
+                                    src="{% static 'images/recipe_images/'|add:i.recipe_name|add:'.jpg' %}" height="200"
+                                    width="200">
+                            </a>
+                            <div class="card-body">{{i.recipe_name}}</div>
 
-            <li>
-                <a href="{{i.recipe_name}}">{{ i.recipe_name }}</a>
-            </li>
-
-            {% endfor %}
-
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
         </p>
     </div>
 </main>
