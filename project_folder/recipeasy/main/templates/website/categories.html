@@ -1,27 +1,25 @@
 {% extends 'website/layout.html' %} {% block content %}{% load static %}
-<main role="main" class="container">
+<link href="cardStlye.css" rel="stylesheet" />
+
+<section class="gallery-block cards-gallery">
     <div class="jumbotron" align="center">
         <h1>Here's our recipe categories!</h1>
-        <p>
-            <div class="container">
-                <div class="row">
-                    {% for i in meals %}
-                    <div class="col-md-6 col-lg-4">
-                        <div class="card border-0">
-                            <a href="{{i.meal_name}}" class="lightbox">
-                                <img class="card-img-top"
-                                    src="{% static 'images/category_images/'|add:i.meal_name|add:'.jpg' %}" height="200"
-                                    width="200">
-                            </a>
-                            <div class="card-body">{{i.meal_name}}</div>
-                        </div>
+        <div class="container">
+            <div class="row row-cols-1 row-cols-md-2">
+                {% for i in meals %}
+                <div class="col mb-3">
+                    <div class="card border-0">
+                        <a href="{{i.meal_name}}" class="lightbox">
+                            <img class="card-img-top"
+                                src="{% static 'images/category_images/'|add:i.meal_name|add:'.jpg' %}" height="260"
+                                width="200">
+                        </a>
+                        <div class="card-body">{{i.meal_name}}</div>
                     </div>
-                    {% endfor %}
                 </div>
+                {% endfor %}
             </div>
-        </p>
+        </div>
     </div>
-</main>
-
-
+</section>
 {% endblock %}
