@@ -1,22 +1,19 @@
 {% extends 'website/layout.html' %} {% block content %}{% load static %}
-<div class="jumbotron">
-    <h2>Here's what we got for '{{query}}':</h2>
-    <div class="container">
-        <div class="row">
-            {% for i in recipes %}
-            <div class="col-md-6 col-lg-4">
-                <div class="card border-0">
-                    <a href="{{i.recipe_name}}" class="lightbox">
-                        <img class="card-img-top"
-                            src="{% static 'images/recipe_images/'|add:i.recipe_name|add:'.jpg' %}" height="200"
-                            width="200">
-                    </a>
-                    <div class="card-body">{{i.recipe_name}}</div>
+<h2>Here's what we got for '{{query}}':</h2>
+<div class="container">
+    <div class="row">
+        {% for i in recipes %}
+        <div class="col-md-6 col-lg-4">
+            <div class="card border-0">
+                <a href="{{i.recipe_name}}" class="lightbox">
+                    <img class="card-img-top" src="{% static 'images/recipe_images/'|add:i.recipe_name|add:'.jpg' %}"
+                        height="200" width="200">
+                </a>
+                <div class="card-body">{{i.recipe_name}}</div>
 
-                </div>
             </div>
-            {% endfor %}
         </div>
+        {% endfor %}
     </div>
 </div>
 {% endblock %}

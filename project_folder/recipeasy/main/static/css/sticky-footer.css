@@ -1,16 +1,28 @@
-main > .container {
-  padding: 60px 15px 0;
+html,body {
+  height: 100%;
 }
 
+#wrap {
+  min-height: 100%;
+}
+
+#main {
+  overflow: auto;
+  padding-bottom: 90px;
+  /* this needs to be bigger than footer height*/
+}
+        
 .footer {
+  position: relative;
+  margin-top: -5px;
+  /* negative value of footer height */
+  height: 100px;
+  clear: both;
+  padding-top: 10px;
   background-color: #f5f5f5;
 }
 
 .footer > .container {
   padding-right: 15px;
   padding-left: 15px;
-}
-
-code {
-  font-size: 80%;
 }

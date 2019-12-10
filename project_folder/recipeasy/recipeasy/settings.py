@@ -28,10 +28,10 @@ SECRET_KEY = config['SECRET_KEY']
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False     # Change to this for apache server hosting
-# DEBUG = True        # Change to this for local hosting
+#DEBUG = True        # Change to this for local hosting
 
 ALLOWED_HOSTS = ['li1849-96.members.linode.com']    # change to this to host on apache server
-# ALLOWED_HOSTS = ['172.104.30.96']               # change to this for local hosting
+#ALLOWED_HOSTS = ['172.104.30.96']               # change to this for local hosting
 
 # Application definition
 
